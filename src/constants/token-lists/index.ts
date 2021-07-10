@@ -26,8 +26,11 @@ const UMA_LIST = 'https://umaproject.org/uma.tokenlist.json'
 const WRAPPED_LIST = 'wrapped.tokensoft.eth'
 =======
 const QUICK_SWAP = 'https://unpkg.com/quickswap-default-token-list@1.0.39/build/quickswap-default.tokenlist.json'
+<<<<<<< HEAD
 const MANIFOLD_LIST = 'https://raw.githubusercontent.com/manifoldfinance/token-list/main/manifold.tokenlist.json'
 >>>>>>> 6b1f8fc0 (feat: initial basic integration of manifold)
+=======
+>>>>>>> fb9a4f37 (chore: removed from token-list unused MANIFOLD_LIST)
 
 // lower index == higher priority for token import
 export const DEFAULT_LIST_OF_LISTS: string[] = [
