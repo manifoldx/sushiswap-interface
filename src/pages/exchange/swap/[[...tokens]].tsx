@@ -131,7 +131,7 @@ export default function Swap() {
     currencies,
     inputError: swapInputError,
     allowedSlippage,
-  } = useDerivedSwapInfo(doArcher)
+  } = useDerivedSwapInfo(doArcher, doManifold)
 
   const {
     wrapType,
@@ -487,10 +487,86 @@ export default function Swap() {
               showCommonBases={true}
               id="swap-currency-input"
             />
+<<<<<<< HEAD
             <AutoColumn justify="space-between" className="py-3">
               <AutoRow justify={isExpertMode ? 'space-between' : 'flex-start'} style={{ padding: '0 1rem' }}>
                 <button
                   className="z-10 -mt-6 -mb-6 rounded-full"
+=======
+            {Boolean(trade) && (
+              <div className="p-1 -mt-2 cursor-pointer rounded-b-md bg-dark-800">
+                <TradePrice
+                  price={trade?.executionPrice}
+                  showInverted={showInverted}
+                  setShowInverted={setShowInverted}
+                  className="bg-dark-900"
+                />
+              </div>
+            )}
+          </div>
+        </div>
+
+        {recipient !== null && !showWrap && (
+          <AddressInputPanel id="recipient" value={recipient} onChange={onChangeRecipient} />
+        )}
+
+        {showWrap ? null : (
+          <div
+            style={{
+              padding: showWrap ? '.25rem 1rem 0 1rem' : '0px',
+            }}
+          >
+            <div className="px-5 mt-1">{doArcher && userHasSpecifiedInputOutput && <MinerTip />}</div>
+          </div>
+        )}
+        {/*
+        {trade && (
+          <div className="p-5 rounded bg-dark-800">
+            <AdvancedSwapDetails trade={trade} allowedSlippage={allowedSlippage} />
+          </div>
+        )} */}
+
+        <BottomGrouping>
+          {swapIsUnsupported ? (
+            <Button color="red" size="lg" disabled>
+              {i18n._(t`Unsupported Asset`)}
+            </Button>
+          ) : !account ? (
+            <Web3Connect size="lg" color="blue" className="w-full" />
+          ) : showWrap ? (
+            <Button color="gradient" size="lg" disabled={Boolean(wrapInputError)} onClick={onWrap}>
+              {wrapInputError ??
+                (wrapType === WrapType.WRAP
+                  ? i18n._(t`Wrap`)
+                  : wrapType === WrapType.UNWRAP
+                  ? i18n._(t`Unwrap`)
+                  : null)}
+            </Button>
+          ) : routeNotFound && userHasSpecifiedInputOutput ? (
+            <div style={{ textAlign: 'center' }}>
+              <div className="mb-1">{i18n._(t`Insufficient liquidity for this trade`)}</div>
+              {singleHopOnly && <div className="mb-1">{i18n._(t`Try enabling multi-hop trades`)}</div>}
+            </div>
+          ) : showApproveFlow ? (
+            <RowBetween>
+              {approvalState !== ApprovalState.APPROVED && (
+                <ButtonConfirmed
+                  onClick={handleApprove}
+                  disabled={approvalState !== ApprovalState.NOT_APPROVED || approvalSubmitted}
+                >
+                  {approvalState === ApprovalState.PENDING ? (
+                    <AutoRow gap="6px" justify="center">
+                      Approving <Loader stroke="white" />
+                    </AutoRow>
+                  ) : (
+                    i18n._(t`Approve ${currencies[Field.INPUT]?.symbol}`)
+                  )}
+                </ButtonConfirmed>
+              )}
+
+              {approvalState === ApprovalState.APPROVED && (
+                <ButtonError
+>>>>>>> 12ab5f3f (fix: solved proper gas estimation)
                   onClick={() => {
                     setApprovalSubmitted(false) // reset 2 step UI for approvals
                     onSwitchTokens()
