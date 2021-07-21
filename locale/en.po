@@ -622,6 +622,9 @@ msgstr "Minimum Received"
 msgid "Minimum received"
 msgstr "Minimum received"
 
+msgid "Miso"
+msgstr "Miso"
+
 msgid "My Liquidity Positions"
 msgstr "My Liquidity Positions"
 

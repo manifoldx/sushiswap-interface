@@ -617,6 +617,9 @@ msgstr ""
 msgid "Minimum received"
 msgstr "最小の受け取り"
 
+msgid "Miso"
+msgstr ""
+
 msgid "My Liquidity Positions"
 msgstr ""
 

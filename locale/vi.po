@@ -615,6 +615,9 @@ msgstr ""
 msgid "Minimum received"
 msgstr "Số tiền nhận được tối thiểu"
 
+msgid "Miso"
+msgstr ""
+
 msgid "My Liquidity Positions"
 msgstr ""
 
