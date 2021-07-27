@@ -132,11 +132,9 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
                   <Typography variant="sm" className="text-primary">
-                    {i18n._(t`Manifold Finance`)}
+                    {i18n._(t`MEV Gas Refunder`)}
                   </Typography>
-                  <QuestionHelper
-                    text={i18n._(t`Send transaction privately to avoid front-running and sandwich attacks.`)}
-                  />
+                  <QuestionHelper text={i18n._(t`MEV Service that pays up to 95% of transaction fee for trading`)} />
                 </div>
                 <Toggle
                   id="toggle-use-manifold"
