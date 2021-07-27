@@ -580,6 +580,9 @@ msgstr ""
 msgid "Manage this pool"
 msgstr "Gestionați acest fond comun"
 
+msgid "Manifold Finance"
+msgstr ""
+
 msgid "Market"
 msgstr ""
 
@@ -838,6 +841,9 @@ msgid "Select an order expiration"
 msgstr ""
 
 msgid "Send to:"
+msgstr ""
+
+msgid "Send transaction privately to avoid front-running and sandwich attacks."
 msgstr ""
 
 msgid "Send transaction privately to avoid front-running and sandwich attacks. Requires a miner tip to incentivize miners"
