@@ -7,3 +7,6 @@ node_modules
 nix
 .git
 .husky
+.next/
+test/
+.github/
