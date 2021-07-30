@@ -3,13 +3,12 @@ set -eo pipefail
 
 echo "Configuring env variables..."
 export CI=''
+export NODE_ENV='production'
 
-echo "Checking NodeJS Heap configuration..."
-node -e 'console.log(`node heap limit = ${require("v8").getHeapStatistics().heap_size_limit / (1024 * 1024)} Mb`)'
-#export NODE_OPTIONS="--max-old-space-size=8192"
-#echo '\nLANG="en_US.UTF-8"' >> /etc/default/locale && /etc/environment
+npm install
+npm run build
 
-echo "Configuring RPC Connections" 
+echo "Configuring RPC Connections"
 DEFAULT_RPC_URI='https://api.sushirelay.com/v1'
 
 if [[ -n "${MANIFOLD_FINANCE_RPC_URI}" ]]; then
@@ -19,4 +18,4 @@ fi
 
 
 echo "Executing NextJS server..."
-yarn start
+npm run-script start
