@@ -45,6 +45,12 @@ export const ARCHER_GAS_URI: { [chainId in ChainId]?: string } = {
   [ChainId.MAINNET]: 'https://api.archerdao.io/v1/gas',
 }
 
+export const MANIFOLD_FINANCE_SUPPORTED_NETWORKS = [ChainId.MAINNET]
+
+export const MANIFOLD_FINANCE_URI: { [chainId in ChainId]?: string } = {
+  [ChainId.MAINNET]: 'https://api.sushirelay.com/v1',
+}
+
 // export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
 //     // [UNI_ADDRESS]: 'UNI',
 //     [TIMELOCK_ADDRESS]: 'Timelock',

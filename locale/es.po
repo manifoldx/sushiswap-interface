@@ -573,6 +573,12 @@ msgid ""
 "used to vote in special MEOW governor contracts."
 msgstr ""
 
+msgid "MEV Gas Refunder"
+msgstr ""
+
+msgid "MEV Service that pays up to 95% of transaction fee for trading"
+msgstr ""
+
 msgid "MEV Shield by Archer DAO"
 msgstr "Escudo MEV de Archer DAO"
 

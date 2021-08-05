@@ -594,6 +594,12 @@ msgstr ""
 "MEOW tokens wrap xSUSHI into BentoBox for double yields and can be\n"
 "used to vote in special MEOW governor contracts."
 
+msgid "MEV Gas Refunder"
+msgstr "MEV Gas Refunder"
+
+msgid "MEV Service that pays up to 95% of transaction fee for trading"
+msgstr "MEV Service that pays up to 95% of transaction fee for trading"
+
 msgid "MEV Shield by Archer DAO"
 msgstr "MEV Shield by Archer DAO"
 
